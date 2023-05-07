@@ -1,0 +1,5 @@
+import requests
+
+def pobierz_dane():
+    odpowiedz = requests.get("https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json")
+    dane = odpowiedz.json()

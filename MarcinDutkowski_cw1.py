@@ -1,4 +1,5 @@
 import requests
+import json
 
 def get_data(url):
 	try:
@@ -11,8 +12,12 @@ def get_data(url):
 		return None
 
 
-superheroes_url = "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json"
-data = get_data(superheroes_url)
+url = "https://httpbin.org/post"
+headers = {'Content-Type': 'application/json'}
+data = {
+	"name": "natalia"
+}
+
 if data:
 	print(data)
 else:
